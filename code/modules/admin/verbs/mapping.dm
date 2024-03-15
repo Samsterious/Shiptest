@@ -158,9 +158,9 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 
 	if(intercom_range_display_status)
 		for(var/obj/item/radio/intercom/I in world)
-			for(var/turf/T in orange(7,I))
+			for(var/turf/T in orange(2,I))
 				var/obj/effect/debugging/marker/F = new/obj/effect/debugging/marker(T)
-				if (!(F in view(7,I.loc)))
+				if (!(F in view(2,I.loc)))
 					qdel(F)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Intercom Range") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
