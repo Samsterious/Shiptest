@@ -5,7 +5,6 @@
 	var/mutable_appearance/highlighted_background
 	var/highlighted = FALSE
 	var/mob/camera/aiEye/pic_in_pic/aiEye
-	snap2grid = TRUE
 
 /atom/movable/screen/movable/pic_in_pic/ai/Initialize()
 	. = ..()
