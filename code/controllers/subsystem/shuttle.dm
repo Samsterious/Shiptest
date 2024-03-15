@@ -112,14 +112,14 @@ SUBSYSTEM_DEF(shuttle)
 	var/dock_angle = dir2angle(M.preferred_direction) + dir2angle(M.port_direction) + 180
 	var/dock_dir = angle2dir(dock_angle)
 
-	var/transit_width = SHUTTLE_TRANSIT_BORDER * 2
-	var/transit_height = SHUTTLE_TRANSIT_BORDER * 2
+	var/transit_width = QUADRANT_MAP_SIZE
+	var/transit_height = QUADRANT_MAP_SIZE
 
 	// Shuttles travelling on their side have their dimensions swapped
 	// from our perspective
 	var/list/union_coords = M.return_union_coords(M.get_all_towed_shuttles(), 0, 0, dock_dir)
-	transit_width += union_coords[3] - union_coords[1] + 1
-	transit_height += union_coords[4] - union_coords[2] + 1
+	//transit_width += union_coords[3] - union_coords[1] + 1
+	//transit_height += union_coords[4] - union_coords[2] + 1
 
 	var/transit_path = /turf/open/space/transit
 	switch(travel_dir)
