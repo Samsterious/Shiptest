@@ -27,8 +27,8 @@
 	locked = 0;
 	name = "fridge"
 	},
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/storage/cans/sixbeer,
 /obj/item/reagent_containers/food/snacks/icecreamsandwich,
 /obj/machinery/light/directional/south,
@@ -50,10 +50,7 @@
 	pixel_x = -11;
 	pixel_y = 5
 	},
-/obj/item/ammo_box/a762_40/inteq{
-	pixel_x = 5;
-	pixel_y = 12
-	},
+/obj/item/storage/box/ammo/a762_40/inteq,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_x = -7;
 	pixel_y = 6
@@ -364,6 +361,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/tank/jetpack/oxygen,
+/obj/item/clothing/mask/gas/inteq,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "hY" = (
@@ -492,6 +490,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/tank/jetpack/oxygen,
+/obj/item/clothing/mask/gas/inteq,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "mw" = (
@@ -575,6 +574,7 @@
 	dir = 8
 	},
 /obj/item/tank/jetpack/oxygen,
+/obj/item/clothing/mask/gas/inteq,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "nL" = (
@@ -650,10 +650,9 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
-/obj/structure/closet/wall{
+/obj/structure/closet/wall/directional/north{
 	icon_door = "orange_wall";
-	name = "uniform closet";
-	pixel_y = 28
+	name = "uniform closet"
 	},
 /obj/item/clothing/head/soft/inteq,
 /obj/item/clothing/head/soft/inteq,
@@ -965,16 +964,14 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "va" = (
-/obj/structure/closet/secure_closet/wall{
-	dir = 4;
+/obj/structure/closet/secure_closet/wall/directional/west{
 	icon_door = "solgov_wall";
 	icon_state = "solgov_wall";
 	name = "vanguard's locker";
-	pixel_x = -28;
 	req_access_txt = "58"
 	},
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
+/obj/item/clothing/mask/balaclava/inteq,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/shoes/combat,
 /obj/item/storage/belt/military/assault,
@@ -1102,10 +1099,9 @@
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
-/obj/structure/closet/secure_closet/wall{
+/obj/structure/closet/secure_closet/wall/directional/north{
 	icon_state = "sec_wall";
 	name = "equipment locker";
-	pixel_y = 28;
 	req_one_access_txt = "1"
 	},
 /turf/open/floor/plasteel/patterned/grid,
@@ -1245,9 +1241,7 @@
 /obj/structure/sign/poster/official/safety_internals{
 	pixel_x = -32
 	},
-/obj/structure/closet/emcloset/wall{
-	pixel_y = 28
-	},
+/obj/structure/closet/emcloset/wall/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "AW" = (
@@ -1391,16 +1385,18 @@
 /obj/item/gun/ballistic/automatic/assault/skm/inteq{
 	pixel_x = -5
 	},
-/obj/structure/closet/secure_closet/wall{
-	dir = 1;
+/obj/structure/closet/secure_closet/wall/directional/south{
 	icon_state = "sec_wall";
 	name = "weapons lockup";
-	pixel_y = -28;
 	req_one_access_txt = "58"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
 	},
+/obj/item/attachment/rail_light,
+/obj/item/attachment/rail_light,
+/obj/item/attachment/rail_light,
+/obj/item/attachment/rail_light,
 /turf/open/floor/carpet/orange,
 /area/ship/bridge)
 "EC" = (
@@ -1588,7 +1584,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/steeldecal/steel_decals_central4,
-/obj/machinery/computer/cargo/express,
+/obj/machinery/computer/cargo,
 /obj/item/radio/intercom/wideband/directional/north{
 	pixel_y = 25;
 	pixel_x = 6
@@ -1956,10 +1952,7 @@
 	pixel_x = 25;
 	pixel_y = 7
 	},
-/obj/structure/closet/emcloset/wall{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/structure/closet/emcloset/wall/directional/south,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "OP" = (
@@ -2057,11 +2050,11 @@
 	dir = 4
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /turf/open/floor/plasteel/patterned/cargo_one,
@@ -2094,7 +2087,7 @@
 "RM" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/fax,
+/obj/machinery/fax/inteq,
 /turf/open/floor/carpet/orange,
 /area/ship/bridge)
 "Sh" = (
@@ -2242,6 +2235,7 @@
 	dir = 8
 	},
 /obj/item/tank/jetpack/oxygen,
+/obj/item/clothing/mask/gas/inteq,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "Wf" = (
@@ -2255,6 +2249,9 @@
 	},
 /obj/effect/turf_decal/siding/thinplating/dark/corner{
 	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/storage/eva)
@@ -2281,6 +2278,10 @@
 /obj/machinery/navbeacon/wayfinding{
 	codes_txt = "patrol;next_patrol=crew";
 	location = "eva"
+	},
+/obj/machinery/power/ship_gravity,
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/storage/eva)
@@ -2350,9 +2351,7 @@
 /obj/item/gps{
 	pixel_x = 12
 	},
-/obj/item/stamp/hos{
-	name = "vanguard's rubber stamp"
-	},
+/obj/item/stamp/inteq/vanguard,
 /obj/item/pen/fountain,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
