@@ -45,8 +45,8 @@
 	apply_damage_type(25, BRUTE)	// This may not seem like much, but if you toss someone out and they go through like four tiles, they're goners
 
 /turf/open/space/transit/CanBuildHere()
-	return SSshuttle.is_in_shuttle_bounds(src)
-
+	// return SSshuttle.is_in_shuttle_bounds(src)
+	return TRUE
 
 /turf/open/space/transit/Initialize(mapload, inherited_virtual_z)
 	. = ..()
