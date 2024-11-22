@@ -363,12 +363,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 			//I'm a professional, okay
 			//what the fuck are you on rn and can I have some
 			//who are you even talking to
-		if(is_type_in_typecache(W, preserve_items_typecache))
-			if(control_computer_obj && control_computer_obj.allow_items)
-				control_computer_obj.frozen_items += W
-				mob_occupant.transferItemToLoc(W, control_computer_obj, TRUE)
-			else
-				mob_occupant.transferItemToLoc(W, loc, TRUE)
+		// if(is_type_in_typecache(W, preserve_items_typecache))
+		if(control_computer_obj && control_computer_obj.allow_items)
+			control_computer_obj.frozen_items += W
+			mob_occupant.transferItemToLoc(W, control_computer_obj, TRUE)
+		else
+			mob_occupant.transferItemToLoc(W, loc, TRUE)
 
 	for(var/obj/item/W as anything in mob_occupant.GetAllContents())
 		qdel(W)//because we moved all items to preserve away
