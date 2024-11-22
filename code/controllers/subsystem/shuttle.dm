@@ -112,14 +112,14 @@ SUBSYSTEM_DEF(shuttle)
 	var/dock_angle = dir2angle(M.preferred_direction) + dir2angle(M.port_direction) + 180
 	var/dock_dir = angle2dir(dock_angle)
 
-	var/transit_width = SHUTTLE_TRANSIT_BORDER * 2
-	var/transit_height = SHUTTLE_TRANSIT_BORDER * 2
+	var/transit_width = QUADRANT_MAP_SIZE
+	var/transit_height = QUADRANT_MAP_SIZE
 
 	// Shuttles travelling on their side have their dimensions swapped
 	// from our perspective
 	var/list/union_coords = M.return_union_coords(M.get_all_towed_shuttles(), 0, 0, dock_dir)
-	transit_width += union_coords[3] - union_coords[1] + 1
-	transit_height += union_coords[4] - union_coords[2] + 1
+	// transit_width += union_coords[3] - union_coords[1] + 1
+	// transit_height += union_coords[4] - union_coords[2] + 1
 
 	var/transit_path = /turf/open/space/transit
 	switch(travel_dir)
@@ -163,8 +163,8 @@ SUBSYSTEM_DEF(shuttle)
 	// Then create a transit docking port in the middle
 	// union coords (1,2) points from the docking port to the bottom left corner of the bounding box
 	// So if we negate those coordinates, we get the vector pointing from the bottom left of the bounding box to the docking port
-	var/transit_x = bottomleft.x + SHUTTLE_TRANSIT_BORDER + abs(union_coords[1])
-	var/transit_y = bottomleft.y + SHUTTLE_TRANSIT_BORDER + abs(union_coords[2])
+	var/transit_x = bottomleft.x + QUADRANT_MAP_SIZE/2 + abs(union_coords[1])
+	var/transit_y = bottomleft.y + QUADRANT_MAP_SIZE/2 + abs(union_coords[2])
 
 	var/turf/midpoint = locate(transit_x, transit_y, bottomleft.z)
 	if(!midpoint)

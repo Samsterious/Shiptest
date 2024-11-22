@@ -1,4 +1,4 @@
-#define BP_MAX_ROOM_SIZE 300
+#define BP_MAX_ROOM_SIZE 1024
 
 GLOBAL_LIST_INIT(typecache_powerfailure_safe_areas, typecacheof(/area/ship/engineering/engine, \
 																/area/ship/science/ai_chamber))
