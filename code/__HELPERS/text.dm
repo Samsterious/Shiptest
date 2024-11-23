@@ -119,7 +119,7 @@
 	if(!t_in)
 		return //Rejects the input if it is null
 
-	var/number_of_alphanumeric = 0
+	// var/number_of_alphanumeric = 0
 	var/last_char_group = NO_CHARS_DETECTED
 	var/t_out = ""
 	var/t_len = length(t_in)
@@ -130,6 +130,7 @@
 	for(var/i = 1, i <= t_len, i += length(char))
 		char = t_in[i]
 
+		/*
 		switch(text2ascii(char))
 
 			//Space
@@ -165,14 +166,17 @@
 
 			else
 				continue
+		*/
 
 		t_out += char
 		charcount++
 		if(charcount >= max_length)
 			break
 
+	/*
 	if(number_of_alphanumeric < 2)
 		return		//protects against tiny names like "A"
+	*/
 
 	if(last_char_group == SPACES_DETECTED)
 		t_out = copytext_char(t_out, 1, -1) //pulls trailing spaces from the name
