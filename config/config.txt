@@ -76,59 +76,59 @@ ENABLE_LOCALHOST_RANK
 ## The "base" minimum number of minutes as living to spawn a ship from the join menu.
 ## Ships may have differing true values depending on the template's coefficient, defined in JSON.
 ## The ship spawn playtime restriction is the ONLY restriction that applies for ship spawning.
-SHIP_SPAWN_BASE_EXP_MIN 600
+SHIP_SPAWN_BASE_EXP_MIN 0
 ## The "base" minimum number of minutes as living to spawn into an officer job.
 ## Ships may have differing true values depending on the template's coefficient, defined in JSON.
 ## Once the ship has been spawned, this restriction will apply for any officer job being joined on a ship.
-OFFICER_JOIN_BASE_EXP_MIN 300
+OFFICER_JOIN_BASE_EXP_MIN 0
 
 ## log OOC channel
-LOG_OOC
+# LOG_OOC
 
 ## log client Say
-LOG_SAY
+# LOG_SAY
 
 ## log admin actions
-LOG_ADMIN
+# LOG_ADMIN
 
 ## log admin chat
-LOG_ADMINCHAT
+# LOG_ADMINCHAT
 
 ## log client access (logon/logoff)
-LOG_ACCESS
+# LOG_ACCESS
 
 ## log game actions (start of round, results, etc.)
-LOG_GAME
+# LOG_GAME
 
 ## log player votes
-LOG_VOTE
+# LOG_VOTE
 
 ## log client Whisper
-LOG_WHISPER
+# LOG_WHISPER
 
 ## log emotes
-LOG_EMOTE
+# LOG_EMOTE
 
 ## log attack messages
-LOG_ATTACK
+# LOG_ATTACK
 
 ## log pda messages
-LOG_PDA
+# LOG_PDA
 
 ## log telecomms messages
-LOG_TELECOMMS
+# LOG_TELECOMMS
 
 ## log prayers
-LOG_PRAYER
+# LOG_PRAYER
 
 ## log lawchanges
-LOG_LAW
+# LOG_LAW
 
 ## log economy actions
-LOG_ECON
+# LOG_ECON
 
 ## log crew manifest to seperate file
-LOG_MANIFEST
+# LOG_MANIFEST
 
 ## log job divide debugging information
 #LOG_JOB_DEBUG
@@ -147,19 +147,19 @@ LOG_MANIFEST
 # LOG_MECHA
 
 ## log virus and actions
-LOG_VIRUS
+# LOG_VIRUS
 
 ## log cloning actions
-LOG_CLONING
+# LOG_CLONING
 
 ## log shuttle actions
-LOG_SHUTTLE
+# LOG_SHUTTLE
 
 ## Log all timers on timer auto reset
 # LOG_TIMERS_ON_BUCKET_RESET
 
 ##Log camera pictures - Must have picture logging enabled
-PICTURE_LOGGING_CAMERA
+# PICTURE_LOGGING_CAMERA
 
 ## period of time in seconds for players to be considered inactive
 # INACTIVITY_PERIOD 300
@@ -192,10 +192,10 @@ VOTE_DELAY 6000
 VOTE_PERIOD 600
 
 ## autovote initial delay (deciseconds) before first automatic transfer vote call (default 120 minutes)
-VOTE_AUTOTRANSFER_INITIAL 72000
+VOTE_AUTOTRANSFER_INITIAL 3153600000
 
 ##autovote delay (deciseconds) before sequential automatic transfer votes are called (default 30 minutes)
-VOTE_AUTOTRANSFER_INTERVAL 18000
+VOTE_AUTOTRANSFER_INTERVAL 3153600000
 
 ## prevents dead players from voting or starting votes
 # NO_DEAD_VOTE
@@ -207,7 +207,7 @@ VOTE_AUTOTRANSFER_INTERVAL 18000
 #NORESPAWN
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Yournamehere
+HOSTEDBY Makyo
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -302,7 +302,7 @@ CHECK_RANDOMIZER
 POPUP_ADMIN_PM
 
 ## Uncomment to allow special 'Easter-egg' events on special holidays such as seasonal holidays and stuff like 'Talk Like a Pirate Day' :3 YAARRR
-ALLOW_HOLIDAYS
+# ALLOW_HOLIDAYS
 
 ## Uncomment to show the names of the admin sending a pm from IRC instead of showing as a stealthmin.
 #SHOW_IRC_NAME
@@ -403,7 +403,7 @@ ANNOUNCE_ADMIN_LOGOUT
 AUTOADMIN_RANK Game Master
 
 ## Uncomment to automatically give that admin rank to all players
-#AUTOADMIN
+AUTOADMIN
 
 
 ## Uncomment to automatically deadmin players when the game starts.
@@ -436,9 +436,9 @@ CLIENT_ERROR_BUILD 1421
 ## Admins are exempt from these limits.
 ## Hitting the minute limit notifies admins.
 ## Set to 0 or comment out to disable.
-SECOND_TOPIC_LIMIT 10
+# SECOND_TOPIC_LIMIT 10
 
-MINUTE_TOPIC_LIMIT 100
+# MINUTE_TOPIC_LIMIT 100
 
 
 ## CLICK RATE LIMITING
@@ -447,9 +447,9 @@ MINUTE_TOPIC_LIMIT 100
 ## Admins are exempt from these limits.
 ## Hitting the minute limit notifies admins.
 ## Set to 0 to disable.
-SECOND_CLICK_LIMIT 15
+# SECOND_CLICK_LIMIT 15
 
-MINUTE_CLICK_LIMIT 400
+# MINUTE_CLICK_LIMIT 400
 
 ##Error handling related options
 ## The "cooldown" time for each occurence of a unique error
@@ -551,15 +551,15 @@ AUTO_PROFILE
 ## Respawn Timer for Respawn in deciseconds
 ## Setting it to 0 disables the respawn timer.
 ## THIS CONFIG DOES NOT OVERRIDE THE NORESPAWN FLAG
-RESPAWN_TIMER 600
+RESPAWN_TIMER 0
 
 ## If the number of controlled non-subshuttle ships in existence is greater than this number,
 ## the shuttle creator and roundstart menu will stop new ships from being created.
 ## If this is undesired, just set this to an arbitrarily high value.
-MAX_SHUTTLE_COUNT 20
+MAX_SHUTTLE_COUNT 999999
 
 ## Limits the maximum size in tiles of a custom shuttle.
-MAX_SHUTTLE_SIZE 300
+MAX_SHUTTLE_SIZE 999999
 
 ### ALL SETTINGS FOR SSmetrics ###
 ## Uncomment the line below to enable SSmetrics sending data to ElasticSearch. You will need to fill in the other lines if you do

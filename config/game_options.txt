@@ -88,16 +88,16 @@ ALERT_DELTA The destruction of the sector is imminent. All local persons are ins
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY TRAITOR 5
-PROBABILITY TRAITORBRO 2
-PROBABILITY TRAITORCHAN 3
-PROBABILITY INTERNAL_AFFAIRS 3
-PROBABILITY NUCLEAR 2
-PROBABILITY CHANGELING 2
-PROBABILITY WIZARD 4
+PROBABILITY TRAITOR 0
+PROBABILITY TRAITORBRO 0
+PROBABILITY TRAITORCHAN 0
+PROBABILITY INTERNAL_AFFAIRS 0
+PROBABILITY NUCLEAR 0
+PROBABILITY CHANGELING 0
+PROBABILITY WIZARD 0
 PROBABILITY EXTENDED 1
-PROBABILITY SECRET_EXTENDED 1
-PROBABILITY CLOWNOPS 2
+PROBABILITY SECRET_EXTENDED 0
+PROBABILITY CLOWNOPS 0
 
 ## You probably want to keep sandbox off by default for secret and random.
 PROBABILITY SANDBOX 0
@@ -126,13 +126,13 @@ CONTINUOUS SECRET_EXTENDED
 ## Toggles for allowing midround antagonists (aka mulligan antagonists).
 ## In modes that are continuous, if all antagonists should die then a new set of antagonists will be created.
 
-MIDROUND_ANTAG TRAITOR
+#MIDROUND_ANTAG TRAITOR
 #MIDROUND_ANTAG TRAITORBRO
-MIDROUND_ANTAG TRAITORCHAN
-MIDROUND_ANTAG INTERNAL_AFFAIRS
+#MIDROUND_ANTAG TRAITORCHAN
+#MIDROUND_ANTAG INTERNAL_AFFAIRS
 #MIDROUND_ANTAG  NUCLEAR
-MIDROUND_ANTAG CHANGELING
-MIDROUND_ANTAG WIZARD
+#MIDROUND_ANTAG CHANGELING
+#MIDROUND_ANTAG WIZARD
 
 ## Uncomment these for overrides of the minimum / maximum number of players in a round type.
 ## If you set any of these occasionally check to see if you still need them as the modes
@@ -422,7 +422,7 @@ OVERFLOW_CAP -1
 
 ## Starlight for exterior walls and breaches. Uncomment for starlight!
 ## This is disabled by default to make testing quicker, should be enabled on production servers or testing servers messing with lighting
-#STARLIGHT
+STARLIGHT
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
 #GREY_ASSISTANTS
@@ -492,16 +492,16 @@ ECONOMY
 ## Overmap Settings ##
 
 ## Put max amount of different event clusters you want to spawn here
-MAX_OVERMAP_EVENT_CLUSTERS 6
+MAX_OVERMAP_EVENT_CLUSTERS 12
 
 ## Put the maximum amount of overmap events here
-MAX_OVERMAP_EVENTS 50
+MAX_OVERMAP_EVENTS 512
 
 ## Put the maximum amount of dynamic overmap locations here
-MAX_OVERMAP_DYNAMIC_EVENTS 10
+MAX_OVERMAP_DYNAMIC_EVENTS 92
 
 ## Size of the overmap squared
-OVERMAP_SIZE 12
+OVERMAP_SIZE 48
 
 ## Which overmap generator to use
 ## Valid values are: "random", "solar_system"
