@@ -29,8 +29,8 @@ GLOBAL_VAR(restart_counter)
  *			All atoms in both compiled and uncompiled maps are initialized()
  */
 /world/New()
-	world.maxx = 512
-	world.maxy = 512
+	world.maxx = 256
+	world.maxy = 256
 
 	log_world("World loaded at [time_stamp()]!")
 	SSmetrics.world_init_time = REALTIMEOFDAY // Important
