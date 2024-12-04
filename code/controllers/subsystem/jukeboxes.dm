@@ -70,6 +70,7 @@ SUBSYSTEM_DEF(jukeboxes)
 
 /datum/controller/subsystem/jukeboxes/Initialize()
 	var/list/tracks = flist("[global.config.directory]/jukebox_music/sounds/")
+	songs = list()
 
 	for(var/S in tracks)
 		var/datum/track/T = new()
