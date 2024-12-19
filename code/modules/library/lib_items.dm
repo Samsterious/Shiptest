@@ -224,7 +224,7 @@
 	var/author			//Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	var/unique = 0		//0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
 	var/title			//The real name of the book.
-	var/window_size = null // Specific window size for the book, i.e: "1920x1080", Size x Width
+	var/window_size = "600x800" // Specific window size for the book, i.e: "1920x1080", Size x Width
 
 
 /obj/item/book/attack_self(mob/user)
