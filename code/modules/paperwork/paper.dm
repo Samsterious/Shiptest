@@ -654,7 +654,7 @@
 /obj/item/paper/proc/get_raw_text()
 	var/paper_contents = ""
 	for(var/datum/paper_input/line as anything in raw_text_inputs)
-		paper_contents += line.raw_text + "/"
+		paper_contents += replacetext(line.raw_text, "\n", "<br>") + "<br><br>"
 	return paper_contents
 
 /// A single instance of a saved raw input onto paper.
