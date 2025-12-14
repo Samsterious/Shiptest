@@ -7,8 +7,7 @@
 	desc = "A crimson combat uniform, reminiscent of the Gorlex Marauders at the height of the Inter-Corporate Wars. It's oddly comfortable, and warm."
 	icon_state = "hardliners"
 	item_state = "hardliners"
-	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
-	can_adjust = FALSE
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
 	icon = 'icons/obj/clothing/faction/hardliners/uniforms.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/uniforms.dmi'
 
@@ -24,6 +23,14 @@
 	icon_state = "hl_officer"
 	item_state = "hl_officer"
 
+/obj/item/clothing/under/plasmaman/hardliners
+	name = "\improper Hardliner phorid envirosuit"
+	desc = "A button-up envirosuit with use intended for phorid Hardliners. Ensures they don't die of combustion."
+	icon_state = "hl_envirosuit"
+	item_state = "hl_envirosuit"
+	icon = 'icons/obj/clothing/faction/hardliners/uniforms.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/uniforms.dmi'
+
 ////////////////////
 //Unarmored suits//
 ///////////////////
@@ -36,6 +43,13 @@
 	icon_state = "hl_apron"
 	item_state = "whitecloth"
 	allowed = MEDICAL_SUIT_ALLOWED_ITEMS
+
+	equip_sound = 'sound/items/equip/cloth_equip.ogg'
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
 
 /obj/item/clothing/suit/hazardvest/hardliners
 	name = "blood-red hazard vest"
@@ -71,6 +85,7 @@
 	icon = 'icons/obj/clothing/faction/hardliners/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
 	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10) //ngr armor reskin - same statline
 
 /obj/item/clothing/suit/armor/hardliners/jacket
 	name = "hardliners armored kutte"
@@ -80,6 +95,7 @@
 	icon = 'icons/obj/clothing/faction/hardliners/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
 	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10) //its not like they cover your arms.
 
 /obj/item/clothing/suit/armor/hardliners/sergeant
 	name = "hardliners sergeant jacket"
@@ -99,8 +115,19 @@
 	icon = 'icons/obj/clothing/faction/hardliners/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
 	blood_overlay_type = "coat"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
 	togglename = "buttons"
+
+	equipping_sound = EQUIP_SOUND_MED_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_MED_GENERIC
+	equip_delay_self = EQUIP_DELAY_SUIT
+	equip_delay_other = EQUIP_DELAY_SUIT * 1.5
+	strip_delay = EQUIP_DELAY_SUIT * 1.5
+	equip_self_flags = EQUIP_ALLOW_MOVEMENT | EQUIP_SLOWDOWN
+
+/obj/item/clothing/suit/toggle/armor/vest/hardliners/Initialize()
+	. = ..()
+	allowed = GLOB.security_vest_allowed
 
 ///////////////
 //Spacesuits//
@@ -127,6 +154,7 @@
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/hl
 	jetpack = null
+	supports_variations = DIGITIGRADE_VARIATION | KEPORI_VARIATION
 
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite/hl
 	name = "elite white-red hardsuit helmet"
@@ -148,6 +176,15 @@
 	icon = 'icons/obj/clothing/faction/hardliners/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/suits.dmi'
 	jetpack = null
+	supports_variations = DIGITIGRADE_VARIATION
+
+/obj/item/clothing/head/helmet/space/plasmaman/hardliners
+	name = "Hardliner phorid envirosuit helmet"
+	desc = "An envirohelmet designed for phorid Hardliners, with intimidating white stripes."
+	icon_state = "hl_envirohelm"
+	item_state = "hl_envirohelm"
+	icon = 'icons/obj/clothing/faction/hardliners/head.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/head.dmi'
 
 /////////
 //Hats//
@@ -182,6 +219,8 @@
 	armor = list("melee" = 40, "bullet" = 60, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50) // The guys who specialize in ballistics would probably have better bullet armor. Maybe.
 	icon_state = "hl_x11"
 	item_state = "hl_x11"
+	can_flashlight = TRUE
+	content_overlays = TRUE
 
 /obj/item/clothing/head/helmet/hardliners/swat
 	name = "hardliners pilot helmet"
@@ -189,6 +228,7 @@
 	flash_protect = FLASH_PROTECTION_WELDER
 	icon_state = "hl_pilot"
 	item_state = "hl_pilot"
+	can_flashlight = TRUE
 
 ////////////
 //Glasses//
@@ -202,6 +242,7 @@
 	icon = 'icons/obj/clothing/faction/hardliners/eyes.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/eyes.dmi'
 	glass_colour_type = /datum/client_colour/glass_colour/red
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 //////////
 //Belts//
@@ -214,9 +255,19 @@
 	item_state = "hl_webbing"
 	icon = 'icons/obj/clothing/faction/hardliners/belt.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/belt.dmi'
+	supports_variations = KEPORI_VARIATION
 
 /obj/item/storage/belt/security/webbing/hardliners/sidewinder/PopulateContents()
 	. = ..()
 	new /obj/item/ammo_box/magazine/m57_39_sidewinder(src)
 	new /obj/item/ammo_box/magazine/m57_39_sidewinder(src)
 	new /obj/item/ammo_box/magazine/m57_39_sidewinder(src)
+
+/obj/item/storage/belt/security/webbing/hardliners/alt
+	name = "hardliners drop pouch harness"
+	desc = "A harness with a bunch of pouches attached to them for operators of the Hardliner movement, can hold security gear."
+	icon_state = "hl_droppouch"
+	item_state = "hl_droppouch"
+	icon = 'icons/obj/clothing/faction/hardliners/belt.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/belt.dmi'
+	supports_variations = null

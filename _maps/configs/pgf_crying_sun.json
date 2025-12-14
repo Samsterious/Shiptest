@@ -2,6 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"faction": "/datum/faction/pgf",
 	"prefix": "PGFN",
+	"manufacturer": "Etherbor Lihmona Shipyards",
 	"map_name": "Crying Sun-class Light Frigate",
 	"namelists": [
 		"PGF"
@@ -13,8 +14,9 @@
 		"Engineering",
 		"RP Focus"
 	],
-	"starting_funds": 1000,
+	"starting_funds": 2000,
 	"map_path": "_maps/shuttles/pgf/pgf_crying_sun.dmm",
+	"token_icon_state": "ship_big_generic",
 	"limit": 1,
 	"job_slots": {
 		"Captain": {
@@ -24,6 +26,7 @@
 		},
 		"Helmsman": {
 			"outfit": "/datum/outfit/job/gezena/assistant/bridge",
+			"officer": true,
 			"slots": 1
 		},
 		"Navy Engineer": {

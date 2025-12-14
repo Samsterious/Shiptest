@@ -8,26 +8,33 @@
 	w_class = WEIGHT_CLASS_SMALL
 	flags_cover = GLASSESCOVERSEYES
 	slot_flags = ITEM_SLOT_EYES
-	strip_delay = 20
-	equip_delay_other = 25
 	resistance_flags = NONE
 	custom_materials = list(/datum/material/glass = 250)
 	supports_variations = VOX_VARIATION
 	greyscale_colors = list(list(14, 26), list(17, 26))
 	greyscale_icon_state = "glasses"
-	var/vision_flags = 0
-	var/darkness_view = 2//Base human is 2
-	var/invis_view = SEE_INVISIBLE_LIVING	//admin only for now
-	var/invis_override = 0 //Override to allow glasses to set higher than normal see_invis
-	var/lighting_alpha
-	var/list/icon/current = list() //the current hud icons
+
+	equip_sound = 'sound/items/equip/straps_equip.ogg'
+	equipping_sound = EQUIP_SOUND_VFAST_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_VFAST_GENERIC
+	equip_delay_self = EQUIP_DELAY_EYEWEAR
+	equip_delay_other = EQUIP_DELAY_EYEWEAR * 1.5
+	strip_delay = EQUIP_DELAY_EYEWEAR * 1.5
+	equip_self_flags = EQUIP_ALLOW_MOVEMENT
+
+	// var/vision_flags = 0
+	// var/darkness_view = 2//Base human is 2
+	// var/invis_view = SEE_INVISIBLE_LIVING	//admin only for now
+	// var/invis_override = 0 //Override to allow glasses to set higher than normal see_invis
+	// var/lighting_alpha
+	// var/list/icon/current = list() //the current hud icons
 	var/vision_correction = 0 //does wearing these glasses correct some of our vision defects?
 	var/glass_colour_type //colors your vision when worn
 
 /obj/item/clothing/glasses/examine(mob/user)
 	. = ..()
 	if(glass_colour_type && ishuman(user))
-		. += "<span class='notice'>Alt-click to toggle its colors.</span>"
+		. += span_notice("Alt-click to toggle [p_their()] colors.")
 
 /obj/item/clothing/glasses/visor_toggling()
 	..()
@@ -54,7 +61,7 @@
 		var/obj/item/organ/eyes/eyes = H.getorganslot(ORGAN_SLOT_EYES)
 		if(!H.is_blind())
 			if(H.glasses == src)
-				to_chat(H, "<span class='danger'>[src] overloads and blinds you!</span>")
+				to_chat(H, span_danger("[src] overloads and blinds you!"))
 				H.flash_act(visual = 1)
 				H.blind_eyes(3)
 				H.blur_eyes(5)
@@ -69,6 +76,7 @@
 	vision_flags = SEE_TURFS
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 
 /obj/item/clothing/glasses/meson/night
@@ -93,6 +101,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 100)
 	custom_price = 250
 	supports_variations = VOX_VARIATION
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 /obj/item/clothing/glasses/science/item_action_slot_check(slot)
 	if(slot == ITEM_SLOT_EYES)
@@ -103,6 +112,7 @@
 	desc = "A pair of prescription glasses fitted with an analyzer for scanning items and reagents. "
 	icon_state = "prescriptionpurple"
 	vision_correction = 1
+	flags_cover = GLASSESCOVERSEYES
 
 /obj/item/clothing/glasses/science/prescription/fake
 	name = "science glasses"
@@ -119,6 +129,7 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	glass_colour_type = /datum/client_colour/glass_colour/green
 	supports_variations = VOX_VARIATION
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
@@ -130,7 +141,7 @@
 /obj/item/clothing/glasses/eyepatch/AltClick(mob/user)
 	. = ..()
 	flipped = !flipped
-	to_chat(user, "<span class='notice'>You shift the eyepatch to cover the [flipped == 0 ? "right" : "left"] eye.</span>")
+	to_chat(user, span_notice("You shift the eyepatch to cover the [flipped == 0 ? "right" : "left"] eye."))
 	icon_state = "eyepatch-[flipped]"
 	item_state = "eyepatch-[flipped]"
 	update_appearance()
@@ -144,7 +155,7 @@
 	if(istype(I, /obj/item/clothing/glasses/eyepatch))
 		var/obj/item/clothing/glasses/eyepatch/old_patch = I
 		var/obj/item/clothing/glasses/blindfold/eyepatch/double_patch = new()
-		to_chat(user, "<span class='notice'>You combine the eyepatches with a knot.</span>")
+		to_chat(user, span_notice("You combine the eyepatches with a knot."))
 		qdel(old_patch)
 		qdel(src)
 		user.put_in_hands(double_patch)
@@ -156,6 +167,7 @@
 	item_state = "glasses"
 	vision_flags = SEE_OBJS
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 /obj/item/clothing/glasses/material/mining
 	name = "optical material scanner"
@@ -237,6 +249,7 @@
 	item_state = "ballistic_goggles"
 	supports_variations = KEPORI_VARIATION | VOX_VARIATION
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
@@ -276,7 +289,7 @@
 
 /obj/item/clothing/glasses/trickblindfold
 	name = "blindfold"
-	desc = "A see-through blindfold perfect for cheating at games like pin the stun baton on the clown."
+	desc = "A see-through blindfold perfect for cheating at games."
 	icon_state = "trickblindfold"
 	item_state = "blindfold"
 
@@ -320,8 +333,8 @@
 	var/obj/item/clothing/glasses/eyepatch/patch_two = new/obj/item/clothing/glasses/eyepatch
 	patch_one.forceMove(user.drop_location())
 	patch_two.forceMove(user.drop_location())
-	to_chat(user, "<span class='notice'>You undo the knot on the eyepatches.</span>")
-	Destroy()
+	to_chat(user, span_notice("You undo the knot on the eyepatches."))
+	qdel(src)
 
 /obj/item/clothing/glasses/sunglasses/big
 	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks flashes."
@@ -337,6 +350,7 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	glass_colour_type = /datum/client_colour/glass_colour/red
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
 
 /obj/item/clothing/glasses/thermal/emp_act(severity)
 	. = ..()
@@ -375,11 +389,12 @@
 	icon_state = "eyepatch-0"
 	item_state = "eyepatch-0"
 	var/flipped = FALSE
+	flags_cover = GLASSESCOVERSEYES
 
 /obj/item/clothing/glasses/thermal/eyepatch/AltClick(mob/user)
 	. = ..()
 	flipped = !flipped
-	to_chat(user, "<span class='notice'>You shift the eyepatch to cover the [flipped == 0 ? "right" : "left"] eye.</span>")
+	to_chat(user, span_notice("You shift the eyepatch to cover the [flipped == 0 ? "right" : "left"] eye."))
 	icon_state = "eyepatch-[flipped]"
 	item_state = "eyepatch-[flipped]"
 	update_appearance()
@@ -401,6 +416,18 @@
 	icon_state = "heat"
 	item_state = "heat"
 	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
+
+/obj/item/clothing/glasses/safety
+	name = "safety goggles"
+	desc = "A pair of goggles meant to protect your eyes from debris and irritants."
+	icon_state = "safety_skier"
+	item_state = "safety_skier"
+	flags_cover = GLASSESCOVERSEYES | SEALS_EYES
+	supports_variations = VOX_VARIATION
+	unique_reskin = list(
+		"biker" = "safety_biker",
+		"skier" = "safety_skier",
+	)
 
 /obj/item/clothing/glasses/orange
 	name = "orange glasses"
@@ -424,9 +451,9 @@
 				if(src == H.glasses)
 					H.client.prefs.uses_glasses_colour = !H.client.prefs.uses_glasses_colour
 					if(H.client.prefs.uses_glasses_colour)
-						to_chat(H, "<span class='notice'>You will now see glasses colors.</span>")
+						to_chat(H, span_notice("You will now see glasses colors."))
 					else
-						to_chat(H, "<span class='notice'>You will no longer see glasses colors.</span>")
+						to_chat(H, span_notice("You will no longer see glasses colors."))
 					H.update_glasses_color(src, 1)
 	else
 		return ..()

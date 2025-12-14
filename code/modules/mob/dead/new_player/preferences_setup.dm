@@ -9,6 +9,13 @@
 		gender = gender_override
 	else
 		gender = pick(MALE,FEMALE,PLURAL)
+		switch(gender)
+			if(MALE)
+				pronouns = "He"
+			if(FEMALE)
+				pronouns = "She"
+			if(PLURAL)
+				pronouns = "They"
 	if(randomise[RANDOM_AGE] || randomise[RANDOM_AGE_ANTAG] && antag_override)
 		age = rand(AGE_MIN,AGE_MAX)
 	if(randomise[RANDOM_UNDERWEAR])
@@ -64,6 +71,5 @@
 	if(selected_outfit && show_gear)
 		selected_outfit.equip(mannequin, TRUE, preference_source = parent)
 
-	COMPILE_OVERLAYS(mannequin)
 	parent.show_character_previews(new /mutable_appearance(mannequin))
 	unset_busy_human_dummy(DUMMY_HUMAN_SLOT_PREFERENCES)

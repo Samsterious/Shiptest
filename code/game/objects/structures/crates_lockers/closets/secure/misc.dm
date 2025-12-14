@@ -11,13 +11,13 @@
 	new /obj/item/aicard(src)
 	new /obj/item/assembly/flash/handheld(src)
 	if(prob(50))
-		new /obj/item/ammo_box/magazine/m50(src)
-		new /obj/item/ammo_box/magazine/m50(src)
-		new /obj/item/gun/ballistic/automatic/pistol/deagle(src)
+		new /obj/item/ammo_box/magazine/cm357(src)
+		new /obj/item/ammo_box/magazine/cm357(src)
+		new /obj/item/gun/ballistic/automatic/pistol/cm357(src)
 	else
 		new /obj/item/ammo_box/a357(src)
 		new /obj/item/ammo_box/a357(src)
-		new /obj/item/gun/ballistic/revolver/mateba(src)
+		new /obj/item/gun/ballistic/revolver/rhino(src)
 
 /obj/structure/closet/secure_closet/ertSec
 	name = "emergency response team security locker"

@@ -54,32 +54,12 @@
 	allowed = list(/obj/item/storage/fancy/cigarettes, /obj/item/spacecash/bundle)
 	flags_inv = HIDEJUMPSUIT
 
-
-/obj/item/clothing/suit/apron/overalls
-	name = "coveralls"
-	desc = "A set of denim overalls."
-	icon_state = "overalls"
-	item_state = "overalls"
-	body_parts_covered = CHEST|GROIN|LEGS
-
 /obj/item/clothing/suit/apron/purple_bartender
 	name = "purple bartender apron"
 	desc = "A fancy purple apron for a stylish person."
 	icon_state = "purplebartenderapron"
 	item_state = "purplebartenderapron"
 	body_parts_covered = CHEST|GROIN|LEGS
-
-/obj/item/clothing/suit/syndicatefake
-	name = "black and red space suit replica"
-	icon = 'icons/obj/clothing/suits/spacesuits.dmi'
-	mob_overlay_icon = 'icons/mob/clothing/suits/spacesuits.dmi'
-	icon_state = "syndicate-black-red"
-	item_state = "syndicate-black-red"
-	desc = "A plastic replica of the Syndicate space suit. You'll look just like a real murderous Syndicate agent in this! This is a toy, it is not made for use in space!"
-	w_class = WEIGHT_CLASS_NORMAL
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy)
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-	resistance_flags = NONE
 
 /obj/item/clothing/suit/toggle/owlwings
 	name = "owl cloak"
@@ -198,6 +178,14 @@
 	icon_state = "cybersun_suit"
 	item_state = "cybersun_suit"
 
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+
+	equip_sound = 'sound/items/equip/cloth_equip.ogg'
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
+
 /obj/item/clothing/suit/straight_jacket
 	name = "straight jacket"
 	desc = "A suit that completely restrains the wearer. Manufactured by Antyphun Corp." //Straight jacket is antifun
@@ -219,11 +207,23 @@
 	icon_state = "ianshirt"
 	item_state = "ianshirt"
 
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
+
 /obj/item/clothing/suit/nerdshirt
 	name = "gamer shirt"
 	desc = "A baggy shirt with vintage game character Super Weasel Kid. Why would anyone wear this?"
 	icon_state = "nerdshirt"
 	item_state = "nerdshirt"
+
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
 
 /obj/item/clothing/suit/jacket
 	name = "bomber jacket"
@@ -234,6 +234,13 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	supports_variations = KEPORI_VARIATION
+
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
 
 /obj/item/clothing/suit/jacket/leather
 	name = "leather jacket"
@@ -243,6 +250,35 @@
 	resistance_flags = NONE
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/gun/ballistic/revolver/detective, /obj/item/radio)
+
+/obj/item/clothing/suit/jacket/leather/coat
+	name = "leather coat"
+	desc = "A shorter, clean leather coat. Far less sturdy than others, and easier to move around in."
+	icon_state = "leatherblack"
+	item_state = "leatherblack"
+	icon = 'icons/obj/clothing/suits/color.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/suits/color.dmi'
+	heat_protection = CHEST|GROIN|ARMS|LEGS
+	cold_protection = CHEST|GROIN|ARMS|LEGS
+	unique_reskin = list(
+		"black leather coat" = "leatherblack",
+		"white leather coat" = "leatherwhite",
+		"brown leather coat" = "leatherbrown",
+		"navy leather coat" = "leathernavy",
+	)
+	unique_reskin_changes_inhand = TRUE
+
+/obj/item/clothing/suit/jacket/leather/coat/black
+	current_skin = "black leather coat"
+
+/obj/item/clothing/suit/jacket/leather/coat/white
+	current_skin = "white leather coat"
+
+/obj/item/clothing/suit/jacket/leather/coat/brown
+	current_skin = "brown leather coat"
+
+/obj/item/clothing/suit/jacket/leather/coat/navy
+	current_skin = "navy leather coat"
 
 /obj/item/clothing/suit/jacket/leather/duster
 	name = "leather duster"
@@ -259,28 +295,19 @@
 	icon_state = "duster_command"
 	item_state = "duster_command"
 
-/obj/item/clothing/suit/jacket/puffer
-	name = "puffer jacket"
-	desc = "A thick jacket with a rubbery, water-resistant shell."
-	icon_state = "pufferjacket"
-	item_state = "hostrench"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 50, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/suit/jacket/puffer/vest
-	name = "puffer vest"
-	desc = "A thick vest with a rubbery, water-resistant shell."
-	icon_state = "puffervest"
-	item_state = "armor"
-	body_parts_covered = CHEST|GROIN
-	cold_protection = CHEST|GROIN
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 30, "rad" = 0, "fire" = 0, "acid" = 0)
-
 /obj/item/clothing/suit/jacket/miljacket
 	name = "military jacket"
 	desc = "A canvas jacket styled after traditional military garb. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket"
 	item_state = "militaryjacket"
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/radio)
+	supports_variations = VOX_VARIATION
+
+/obj/item/clothing/suit/jacket/baggy
+	name = "baggy shirt"
+	desc = "An oversized baggy shirt. Why?"
+	icon_state = "baggy"
+	item_state = "baggy"
 
 /obj/item/clothing/suit/jacket/letterman
 	name = "letterman jacket"
@@ -312,6 +339,12 @@
 	icon_state = "gothcoat"
 	item_state = "gothcoat"
 
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
+
 /obj/item/clothing/suit/caution
 	name = "wet floor sign"
 	desc = "No running."
@@ -327,6 +360,12 @@
 	body_parts_covered = CHEST|GROIN
 	attack_verb = list("warned", "cautioned", "smashed")
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
 
 /obj/item/clothing/head/hooded/ablative
 	name = "ablative hood"
@@ -407,3 +446,19 @@
 	desc = "From grills to guns, this shirt's seen it all."
 	icon_state = "hawaiian_blue"
 	item_state = "hawaiian_blue"
+
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_COAT
+	equip_delay_other = EQUIP_DELAY_COAT * 1.5
+	strip_delay = EQUIP_DELAY_COAT * 1.5
+
+/obj/item/clothing/suit/hawaiian/pink
+	name = "floral shirt"
+	desc = "From grills to guns, this shirt's seen it all."
+	icon_state = "hawaiian_pink"
+
+/obj/item/clothing/suit/hawaiian/red
+	name = "floral shirt"
+	desc = "From grills to guns, this shirt's seen it all."
+	icon_state = "hawaiian_red"

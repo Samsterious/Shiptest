@@ -21,10 +21,11 @@
 #define DEADMIN_POSITION_SECURITY (1<<18)
 #define DEADMIN_POSITION_SILICON (1<<19)
 #define SOUND_ENDOFROUND (1<<20)
-#define SPLIT_ADMIN_TABS (1<<22)
-#define FAST_MC_REFRESH (1<<23)
+#define SPLIT_ADMIN_TABS (1<<21)
+#define FAST_MC_REFRESH (1<<22)
+#define SOUND_RADIO (1<<23)
 
-#define TOGGLES_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_ENDOFROUND|MEMBER_PUBLIC|INTENT_STYLE|MIDROUND_ANTAG|SOUND_INSTRUMENTS|SOUND_SHIP_AMBIENCE|SOUND_PRAYERS|SOUND_ANNOUNCEMENTS)
+#define TOGGLES_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_ENDOFROUND|SOUND_RADIO|MEMBER_PUBLIC|INTENT_STYLE|MIDROUND_ANTAG|SOUND_INSTRUMENTS|SOUND_SHIP_AMBIENCE|SOUND_PRAYERS|SOUND_ANNOUNCEMENTS)
 
 //Chat toggles
 #define CHAT_OOC (1<<0)
@@ -64,13 +65,6 @@
 #define PARALLAX_DELAY_DEFAULT world.tick_lag
 #define PARALLAX_DELAY_MED 1
 #define PARALLAX_DELAY_LOW 2
-
-#define SEC_DEPT_NONE "None"
-#define SEC_DEPT_RANDOM "Random"
-#define SEC_DEPT_ENGINEERING "Engineering"
-#define SEC_DEPT_MEDICAL "Medical"
-#define SEC_DEPT_SCIENCE "Science"
-#define SEC_DEPT_SUPPLY "Supply"
 
 // Playtime tracking system, see jobs_exp.dm
 // Due to changes to job experience requirements, many of these are effectively unused.
@@ -133,6 +127,17 @@
 #define PROSTHETIC_NORMAL "normal"
 #define PROSTHETIC_AMPUTATED "amputated"
 #define PROSTHETIC_ROBOTIC "prosthetic"
+
+/// You cannot speak or understand this language whatsoever.
+#define LANGUAGE_UNKNOWN "Unknown (0)"
+/// You cannot speak this language, but can recognize some of the words.
+#define LANGUAGE_RECOGNIZED "Recognized (1)"
+/// You are familiar with this language enough to sort of speak it, but cannot understand it very well.
+#define LANGUAGE_FAMILIAR "Familiar (2)"
+/// You are fluent in this language, and can both understand and speak it perfectly.
+#define LANGUAGE_FLUENT "Fluent (3)"
+/// Maximum number of additional languages that can be selected.
+#define MAX_LANGUAGE_POINTS 4
 
 #define NOT_SYNTHETIC FALSE
 #define IS_SYNTHETIC TRUE
