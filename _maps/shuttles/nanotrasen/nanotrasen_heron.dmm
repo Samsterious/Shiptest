@@ -1031,12 +1031,6 @@
 /turf/open/floor/circuit/green,
 /area/ship/engineering/communications)
 "ek" = (
-/obj/item/gun/energy/e_gun/smg{
-	pixel_y = 9
-	},
-/obj/item/gun/energy/e_gun/smg{
-	pixel_y = 2
-	},
 /obj/item/gun/ballistic/shotgun/automatic/m11{
 	pixel_y = -3
 	},
@@ -2042,7 +2036,6 @@
 /obj/item/clothing/glasses/hud/security/sunglasses,
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch,
 /obj/item/clothing/gloves/krav_maga/sec,
-/obj/item/gun/energy/e_gun/hos,
 /obj/structure/closet/secure_closet{
 	icon_state = "hos";
 	req_access = list(58)
@@ -2286,14 +2279,6 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hangar)
 "iY" = (
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = 2;
-	pixel_y = 3
-	},
 /obj/effect/turf_decal/arrows{
 	dir = 8
 	},
@@ -2305,16 +2290,6 @@
 /obj/item/storage/box/donkpockets{
 	pixel_x = -5;
 	pixel_y = 3
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = 5
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = 5
 	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
@@ -3789,12 +3764,6 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/crew/toilet)
 "nT" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 5
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
 /obj/structure/flora/ausbushes/reedbush{
 	pixel_x = -6;
 	pixel_y = 18
@@ -4154,10 +4123,6 @@
 /obj/effect/decal/cleanable/vomit/old,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/wall/directional/west,
-/obj/item/reagent_containers/syringe/contraband/fentanyl{
-	pixel_x = -3;
-	pixel_y = 4
-	},
 /obj/item/reagent_containers/syringe/contraband/methamphetamine,
 /obj/item/reagent_containers/syringe/charcoal{
 	pixel_x = -3
@@ -4879,8 +4844,6 @@
 /obj/item/reagent_containers/glass/bowl{
 	pixel_x = 2
 	},
-/obj/item/trash/plate,
-/obj/item/trash/plate,
 /obj/structure/closet/crate/freezer{
 	name = "kitchen supplies"
 	},
@@ -5409,9 +5372,6 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/toy/figure/clown{
-	pixel_x = -9
-	},
 /obj/item/toy/figure/detective{
 	pixel_y = 7;
 	pixel_x = 9
@@ -6568,7 +6528,6 @@
 /obj/item/storage/backpack/captain,
 /obj/item/clothing/under/rank/centcom/officer,
 /obj/item/storage/belt/sabre,
-/obj/item/gun/energy/e_gun/adv_stopping,
 /obj/item/door_remote/captain,
 /obj/machinery/light_switch{
 	dir = 1;
@@ -6898,7 +6857,6 @@
 /area/ship/hallway/aft)
 "zv" = (
 /obj/structure/rack,
-/obj/item/gun/energy/e_gun/dragnet,
 /obj/item/grenade/barrier{
 	pixel_x = -3;
 	pixel_y = 3
@@ -7024,12 +6982,6 @@
 /area/ship/maintenance/central)
 "zL" = (
 /obj/structure/closet/secure_closet/freezer/meat/open,
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
 /obj/effect/turf_decal/box/corners{
 	dir = 8
 	},
@@ -7832,7 +7784,6 @@
 "Dh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
-/obj/item/reagent_containers/food/snacks/pie/cream,
 /turf/open/floor/plating,
 /area/ship/crew/canteen)
 "Dk" = (
@@ -9081,38 +9032,6 @@
 	dir = 9
 	},
 /obj/effect/turf_decal/corner/opaque/white/diagonal,
-/obj/item/reagent_containers/food/snacks/grown/corn{
-	pixel_x = -2;
-	pixel_y = 11
-	},
-/obj/item/reagent_containers/food/snacks/grown/corn{
-	pixel_x = -2;
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/food/snacks/grown/tomato{
-	pixel_x = -9;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/food/snacks/grown/tomato{
-	pixel_x = -6;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/food/snacks/grown/soybeans{
-	pixel_x = 4;
-	pixel_y = 1
-	},
-/obj/item/reagent_containers/food/snacks/grown/soybeans{
-	pixel_x = 4;
-	pixel_y = -1
-	},
-/obj/item/reagent_containers/food/snacks/grown/onion{
-	pixel_x = -8;
-	pixel_y = -6
-	},
-/obj/item/reagent_containers/food/snacks/grown/onion{
-	pixel_x = -4;
-	pixel_y = -8
-	},
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen/kitchen)
 "HH" = (
@@ -9322,7 +9241,6 @@
 /area/ship/engineering/electrical)
 "Ip" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/snacks/mint,
 /obj/item/reagent_containers/condiment/enzyme{
 	pixel_x = -2;
 	pixel_y = 6
@@ -10134,17 +10052,6 @@
 /area/ship/science/robotics)
 "LX" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/commander{
-	pixel_y = -3;
-	pixel_x = -2
-	},
-/obj/item/gun/ballistic/automatic/pistol/commander{
-	pixel_x = -2
-	},
-/obj/item/gun/ballistic/automatic/pistol/commander{
-	pixel_y = 3;
-	pixel_x = -2
-	},
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
@@ -11197,9 +11104,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/clown{
-	pixel_x = -32
-	},
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
 "PZ" = (
@@ -12711,8 +12615,6 @@
 /obj/item/clothing/suit/armor/vest/security/officer,
 /obj/item/clothing/head/helmet/riot,
 /obj/item/clothing/head/helmet/riot,
-/obj/item/clothing/head/helmet/swat/nanotrasen,
-/obj/item/clothing/head/helmet/swat/nanotrasen,
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = 7;
@@ -13016,8 +12918,6 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/reagent_containers/food/snacks/dough,
-/obj/item/reagent_containers/food/snacks/dough,
 /obj/item/kitchen/rollingpin,
 /obj/item/melee/knife/butcher{
 	pixel_x = 13
@@ -13052,27 +12952,6 @@
 	},
 /obj/item/storage/box/lethalshot{
 	pixel_y = 5
-	},
-/obj/item/ammo_box/magazine/smgm9mm,
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 1;
-	pixel_x = 2
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_x = 5;
-	pixel_y = 4
 	},
 /obj/item/storage/box/ammo/c9mm,
 /obj/item/storage/box/ammo/c9mm,
