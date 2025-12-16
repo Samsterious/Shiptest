@@ -163,8 +163,8 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 
 
 /proc/load_library_db_to_cache()
-	if(GLOB.cachedbooks)
-		return
+	// if(GLOB.cachedbooks)
+	// 	return
 	if(!SSdbcore.Connect())
 		return
 	GLOB.cachedbooks = list()
@@ -221,8 +221,8 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 	var/cooldown = 0
 
 /obj/machinery/computer/bookmanagement/proc/build_library_menu()
-	if(libcomp_menu)
-		return
+	// if(libcomp_menu)
+	// 	return
 	load_library_db_to_cache()
 	if(!GLOB.cachedbooks)
 		return
