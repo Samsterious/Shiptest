@@ -22,6 +22,8 @@
 	var/mutable_appearance/top_overlay
 	///Type of ingredients to accept, [CUSTOM_INGREDIENT_TYPE_EDIBLE] for example.
 	var/ingredient_type
+	///Player-generated custom name displayed in examine text.
+	var/custom_name
 
 
 /datum/component/customizable_reagent_holder/Initialize(
@@ -100,7 +102,20 @@
 
 ///Handles when the customizable food is attacked by something.
 /datum/component/customizable_reagent_holder/proc/customizable_attack(datum/source, obj/ingredient, mob/attacker, silent = FALSE, force = FALSE)
-	SIGNAL_HANDLER
+	SIGNAL_HANDLER_DOES_SLEEP
+
+	var/atom/atom_parent = parent
+	if(istype(ingredient, /obj/item/pen))
+		var/inputvalue = stripped_input(attacker, "What would you like the food to be called?", "Food Naming", "", MAX_NAME_LEN)
+
+		if(!inputvalue)
+			return
+
+		if(attacker.canUseTopic(atom_parent, BE_CLOSE))
+			custom_name = inputvalue
+			atom_parent.name = custom_name
+
+		return
 
 	var/valid_ingredient = TRUE
 
@@ -117,7 +132,6 @@
 		to_chat(attacker, span_warning("[parent] is too full for any more ingredients!"))
 		return COMPONENT_NO_AFTERATTACK
 
-	var/atom/atom_parent = parent
 	if(!attacker.transferItemToLoc(ingredient, atom_parent))
 		return
 
@@ -191,7 +205,8 @@
 /datum/component/customizable_reagent_holder/proc/add_ingredient(obj/item/ingredient)
 	var/atom/atom_parent = parent
 	LAZYADD(ingredients, ingredient)
-	atom_parent.name = "[custom_adjective()] [custom_type()] [initial(atom_parent.name)]"
+	if (!custom_name)
+		atom_parent.name = "[custom_adjective()] [custom_type()] [initial(atom_parent.name)]"
 	SEND_SIGNAL(atom_parent, COMSIG_ATOM_CUSTOMIZED, ingredient)
 	SEND_SIGNAL(ingredient, COMSIG_ITEM_USED_AS_INGREDIENT, atom_parent)
 
