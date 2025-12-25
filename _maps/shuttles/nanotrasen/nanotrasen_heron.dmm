@@ -469,8 +469,7 @@
 	},
 /obj/machinery/jukebox/boombox{
 	pixel_y = 4;
-	pixel_x = 2;
-	icon_state = "boombox-"
+	pixel_x = 2
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/bridge)
@@ -506,9 +505,7 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "cd" = (
@@ -718,7 +715,6 @@
 	name = "Cargo Hatch"
 	},
 /obj/docking_port/mobile{
-	can_move_docking_ports = 1;
 	launch_status = 0;
 	port_direction = 4;
 	preferred_direction = 4
@@ -742,9 +738,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/electrical)
 "cY" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -1024,7 +1018,6 @@
 	network = "nt_commnet"
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/machinery/light/small/directional/north,
@@ -1227,9 +1220,7 @@
 	id = "heron_outercargo";
 	name = "Cargo Hatch"
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/patterned/ridged,
 /area/ship/cargo)
 "fb" = (
@@ -1524,7 +1515,6 @@
 /obj/item/storage/case/surgery,
 /obj/item/clothing/gloves/color/latex,
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/corner/opaque/blue/full,
@@ -1779,7 +1769,6 @@
 "ht" = (
 /obj/effect/turf_decal/trimline/opaque/yellow/line,
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/machinery/computer/monitor{
@@ -1924,9 +1913,7 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
@@ -2773,7 +2760,6 @@
 	network = "nt_commnet"
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/machinery/light/small/directional/north,
@@ -3304,7 +3290,6 @@
 	pixel_x = 3
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/item/clothing/head/beret/black{
@@ -3408,7 +3393,6 @@
 	pixel_y = 7
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
@@ -3523,9 +3507,7 @@
 /area/ship/security)
 "ne" = (
 /obj/structure/window/reinforced/spawner/north,
-/obj/machinery/computer/card/minor/hos{
-	dir = 2
-	},
+/obj/machinery/computer/card/minor/hos,
 /obj/effect/turf_decal/siding/wideplating/dark,
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
@@ -4035,7 +4017,6 @@
 /area/ship/crew/canteen)
 "oS" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
@@ -4064,9 +4045,7 @@
 /obj/machinery/power/emitter/welded{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "oX" = (
@@ -4262,7 +4241,6 @@
 /area/ship/engineering)
 "qc" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
@@ -4364,7 +4342,6 @@
 "qH" = (
 /obj/effect/turf_decal/trimline/opaque/yellow/line,
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/structure/table/reinforced{
@@ -4515,9 +4492,7 @@
 	id = "heron_mechbayholo";
 	locked = 1
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/techfloor{
 	dir = 8
 	},
@@ -4541,7 +4516,6 @@
 /area/ship/crew/dorm)
 "rt" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/siding/thinplating/dark,
@@ -5401,9 +5375,7 @@
 "tN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
-	dir = 2
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -5578,9 +5550,7 @@
 /obj/structure/tank_dispenser,
 /obj/structure/grille/broken,
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
@@ -5638,9 +5608,7 @@
 /obj/item/bedsheet/head_of_personnel,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/dorm/dormthree)
 "uG" = (
@@ -5986,9 +5954,7 @@
 /obj/machinery/power/emitter/welded{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
@@ -6448,9 +6414,7 @@
 	dir = 4
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -6549,9 +6513,7 @@
 /turf/open/floor/carpet/green,
 /area/ship/crew/dorm/dormtwo)
 "yc" = (
-/obj/machinery/atmospherics/components/unary/shuttle/heater{
-	dir = 4
-	},
+/obj/machinery/atmospherics/components/unary/shuttle/heater,
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/window/plasma/reinforced/spawner/east,
 /turf/open/floor/plating,
@@ -6694,9 +6656,7 @@
 "yQ" = (
 /obj/structure/bookcase/random/fiction,
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/machinery/light/directional/west,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/crew/law_office)
@@ -6762,9 +6722,7 @@
 /area/ship/engineering/atmospherics)
 "zc" = (
 /obj/effect/turf_decal/trimline/opaque/red/corner,
-/obj/effect/turf_decal/siding/wideplating/dark/corner{
-	dir = 2
-	},
+/obj/effect/turf_decal/siding/wideplating/dark/corner,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -7089,9 +7047,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "Ak" = (
@@ -7324,7 +7280,6 @@
 /area/ship/security)
 "Bn" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/techfloor{
@@ -7376,9 +7331,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hangar)
 "Bu" = (
@@ -7571,9 +7524,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/communications)
 "Cs" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -7756,7 +7707,6 @@
 /area/ship/engineering/atmospherics)
 "Dd" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/siding/thinplating/dark,
@@ -7831,7 +7781,6 @@
 	dir = 8
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/structure/cable{
@@ -7909,7 +7858,6 @@
 "DE" = (
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/machinery/computer/rdconsole/robotics{
@@ -9019,9 +8967,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "HG" = (
@@ -10105,7 +10051,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/wall/directional/south{
-	icon_door = null;
 	name = "Office Supplies"
 	},
 /obj/item/storage/briefcase,
@@ -10447,7 +10392,6 @@
 /area/ship/science/robotics)
 "MV" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/techfloor{
@@ -10978,7 +10922,6 @@
 	pixel_y = 1
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/decal/fakelattice{
@@ -11001,7 +10944,6 @@
 	pixel_y = 1
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
@@ -11059,7 +11001,6 @@
 	},
 /obj/machinery/pipedispenser,
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /turf/open/floor/plasteel/tech/grid,
@@ -11359,9 +11300,7 @@
 /turf/open/floor/plating,
 /area/ship/hangar)
 "QU" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -11565,9 +11504,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "RO" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -11620,9 +11557,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/light/directional/south,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/machinery/power/ship_gravity,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -11668,9 +11603,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
-	dir = 2
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -11752,9 +11685,7 @@
 	id = "heron_mechbayholo";
 	locked = 1
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
@@ -12092,9 +12023,7 @@
 	id = "heron_outercargo";
 	name = "Cargo Hatch"
 	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/patterned/ridged,
 /area/ship/cargo)
 "TO" = (
@@ -12238,9 +12167,7 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/engineering)
 "Uq" = (
-/obj/machinery/power/shuttle/engine/electric{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/electric,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -12408,7 +12335,6 @@
 /area/ship/hangar)
 "UN" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/siding/thinplating/dark,
@@ -12509,9 +12435,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "Va" = (
-/obj/machinery/atmospherics/components/unary/shuttle/heater{
-	dir = 4
-	},
+/obj/machinery/atmospherics/components/unary/shuttle/heater,
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/window/plasma/reinforced/spawner/east,
 /turf/open/floor/plating,
@@ -12649,7 +12573,6 @@
 	pixel_y = 8
 	},
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/decal/fakelattice{
@@ -12755,9 +12678,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "Wm" = (
-/obj/machinery/power/shuttle/engine/fueled/plasma{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/fueled/plasma,
 /obj/machinery/door/poddoor{
 	id = "heron_engineblast";
 	name = "Engine Blast Door";
@@ -12847,9 +12768,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/crew/toilet)
 "WP" = (
-/obj/machinery/power/shuttle/engine/electric{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/electric,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -13092,9 +13011,7 @@
 /turf/open/floor/wood,
 /area/ship/crew/law_office)
 "Xv" = (
-/obj/machinery/power/shuttle/engine/fueled/plasma{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/fueled/plasma,
 /obj/machinery/door/poddoor{
 	id = "heron_engineblast";
 	name = "Engine Blast Door";
@@ -13135,7 +13052,6 @@
 /area/ship/science/robotics)
 "XF" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
@@ -13304,7 +13220,6 @@
 /area/ship/crew/dorm)
 "Yl" = (
 /obj/structure/railing{
-	dir = 2;
 	layer = 4.1
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,

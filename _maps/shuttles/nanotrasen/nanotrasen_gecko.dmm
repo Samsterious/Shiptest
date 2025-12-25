@@ -67,7 +67,6 @@
 /area/ship/engineering/engine)
 "az" = (
 /obj/docking_port/mobile{
-	can_move_docking_ports = 1;
 	dir = 2;
 	launch_status = 0;
 	name = "mining ship";
@@ -326,9 +325,7 @@
 /turf/open/floor/engine/airless,
 /area/ship/engineering/engine)
 "cx" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -959,9 +956,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
 "jn" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -2272,9 +2267,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/shuttle/engine/electric{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/electric,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "wB" = (
@@ -2320,9 +2313,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/shuttle/engine/electric/premium{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/electric/premium,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "xl" = (
@@ -2356,10 +2347,6 @@
 	pixel_x = 5;
 	pixel_y = -25
 	},
-/obj/item/reagent_containers/food/snacks/canned/beans,
-/obj/item/reagent_containers/food/snacks/canned/beans,
-/obj/item/reagent_containers/food/snacks/canned/beans,
-/obj/item/reagent_containers/food/snacks/canned/beans,
 /obj/structure/closet/crate,
 /obj/effect/spawner/random/food_or_drink/ration,
 /obj/effect/spawner/random/food_or_drink/ration,
@@ -4054,9 +4041,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/shuttle/engine/electric{
-	dir = 4
-	},
+/obj/machinery/power/shuttle/engine/electric,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "OV" = (
@@ -4108,9 +4093,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/storage)
 "Pk" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -5191,9 +5174,7 @@
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
 "Zn" = (
-/obj/machinery/power/smes/shuttle/precharged{
-	dir = 4
-	},
+/obj/machinery/power/smes/shuttle/precharged,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
