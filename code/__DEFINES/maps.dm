@@ -130,8 +130,8 @@ require only minor tweaks.
 #define QUADRANT_MAP_SIZE 256
 #define OCTODRANT_MAP_SIZE 63
 
-#define QUADRANT_SIZE_BORDER 0
-#define TRANSIT_SIZE_BORDER 0
+#define QUADRANT_SIZE_BORDER 3
+#define TRANSIT_SIZE_BORDER 3
 
 #define DEFAULT_ALLOC_JUMP 5
 
