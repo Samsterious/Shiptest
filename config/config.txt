@@ -556,7 +556,7 @@ AUTO_PROFILE
 ## Respawn Timer for Respawn in deciseconds
 ## Setting it to 0 disables the respawn timer.
 ## THIS CONFIG DOES NOT OVERRIDE THE NORESPAWN FLAG
-RESPAWN_TIMER 1
+RESPAWN_TIMER 0
 
 ## If the number of controlled non-subshuttle ships in existence is greater than this number,
 ## the shuttle creator and roundstart menu will stop new ships from being created.
