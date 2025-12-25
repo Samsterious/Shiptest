@@ -248,6 +248,19 @@
 /area/outpost{
 	name = "Seed Module"
 	})
+"og" = (
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "1"
+	},
+/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/turf/closed/indestructible/reinforced,
+/area/outpost{
+	name = "Seed Module"
+	})
 "on" = (
 /turf/closed/wall/r_wall,
 /area/outpost{
@@ -374,9 +387,11 @@
 	name = "Seed Module"
 	})
 "uZ" = (
-/obj/structure/chair/plastic{
-	pixel_x = 3;
-	pixel_y = 5
+/obj/machinery/elevator_call_button{
+	pixel_y = 24
+	},
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "1"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost{
@@ -562,12 +577,10 @@
 	name = "Seed Module"
 	})
 "FR" = (
-/obj/machinery/elevator_call_button{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/effect/landmark/outpost/elevator_machine{
-	shaft = "1"
+/obj/structure/chair/plastic{
+	pixel_x = 3;
+	pixel_y = 5;
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost{
@@ -606,14 +619,14 @@
 	name = "Seed Module"
 	})
 "HF" = (
-/obj/machinery/door/airlock/hatch,
 /obj/effect/landmark/outpost/elevator_machine{
 	shaft = "1"
 	},
+/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/tech/grid,
 /area/outpost{
 	name = "Seed Module"
@@ -33389,15 +33402,15 @@ DS
 on
 to
 rw
-PA
-HF
-Ae
-Ae
-Ae
-Ae
-Ae
-zz
 WW
+zz
+Ae
+Ae
+Ae
+Ae
+Ae
+HF
+PA
 rw
 Yd
 on
@@ -33646,15 +33659,15 @@ lw
 XV
 Gm
 Qt
-PA
-HF
+xm
+zz
 Ae
 Ae
 kc
 Ae
 Ae
-zz
-xm
+HF
+PA
 ax
 Oi
 Gh
@@ -33903,15 +33916,15 @@ lF
 on
 TE
 rw
-PA
-HF
-Ae
-Ae
-Ae
-Ae
-Ae
-zz
 jj
+zz
+Ae
+Ae
+Ae
+Ae
+Ae
+og
+PA
 rw
 de
 on
@@ -34160,15 +34173,15 @@ LP
 on
 PA
 rw
-PA
-zz
-Ae
-Ae
-Ae
-Ae
-Ae
-zz
 si
+zz
+Ae
+Ae
+Ae
+Ae
+Ae
+zz
+PA
 rw
 PA
 on
