@@ -135,4 +135,4 @@ require only minor tweaks.
 
 #define DEFAULT_ALLOC_JUMP 5
 
-#define MAP_EDGE_PAD 0
+#define MAP_EDGE_PAD 5
