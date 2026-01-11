@@ -1060,7 +1060,7 @@ SUBSYSTEM_DEF(overmap)
 	name = "Gorlex Controlled - Value of Public Works"
 	starname = "Ecbatana"
 	startype = /datum/overmap/star/dwarf
-	default_outpost_type = /datum/overmap/outpost/byos // /datum/overmap/outpost/ngr_rock
+	default_outpost_type = /datum/overmap/outpost/ngr_rock
 
 	//main colors, used for dockable terrestrials, and background
 	primary_color = "#d9ad82"
@@ -1081,7 +1081,7 @@ SUBSYSTEM_DEF(overmap)
 	name = "CLIP Controlled - High-Pier"
 	starname = "Chana"
 	startype = /datum/overmap/star/dwarf/orange
-	default_outpost_type = /datum/overmap/outpost/byos // /datum/overmap/outpost/clip_ocean
+	default_outpost_type = /datum/overmap/outpost/clip_ocean
 
 	//main colors, used for dockable terrestrials, and background
 	primary_color = "#6fa8de"
@@ -1102,7 +1102,7 @@ SUBSYSTEM_DEF(overmap)
 	name = "Independent - Minya"
 	starname = "Aubaine"
 	startype = /datum/overmap/star/medium
-	default_outpost_type = /datum/overmap/outpost/byos // /datum/overmap/outpost/indie_space
+	default_outpost_type = /datum/overmap/outpost/indie_space
 
 	//main colors, used for dockable terrestrials, and background
 	primary_color = "#5e5e5e"
@@ -1123,7 +1123,7 @@ SUBSYSTEM_DEF(overmap)
 	name = "Nanotrasen Controlled - Persei-277"
 	starname = "Persei-277"
 	startype = /datum/overmap/star/medium
-	default_outpost_type = /datum/overmap/outpost/byos // /datum/overmap/outpost/nanotrasen_ice
+	default_outpost_type = /datum/overmap/outpost/nanotrasen_ice
 
 	//main colors, used for dockable terrestrials, and background
 	primary_color = "#7e8cd9"
