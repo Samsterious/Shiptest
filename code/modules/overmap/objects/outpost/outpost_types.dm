@@ -23,10 +23,10 @@
 
 /datum/map_template/outpost/elevator_indie
 	name = "elevator_indie"
-/*
+
 /datum/map_template/outpost/elevator_ice
 	name = "elevator_ice"
-*/
+
 /datum/map_template/outpost/elevator_rock
 	name = "elevator_rock"
 
@@ -73,7 +73,7 @@
 /*
 	Nanotrasen Ice Planet
 */
-/*
+
 /datum/map_template/outpost/nanotrasen_ice
 	name = "nanotrasen_ice"
 	outpost_name = "Yebiri Sipili"
@@ -103,7 +103,7 @@
 	name = "hangar/nt_ice_56x40"
 	dock_width = 56
 	dock_height = 40
-*/
+
 
 /*
 	Independent Rock Planet //ROCK AND STONE!
@@ -211,14 +211,14 @@
 /*
 	/datum/overmap/outpost subtypes
 */
-/*
+
 /datum/overmap/outpost/indie_space
 	token_icon_state = "station_cylinder"
 	main_template = /datum/map_template/outpost/indie_space
 	elevator_template = /datum/map_template/outpost/elevator_indie
 	faction = FACTION_INDEPENDENT
 	// Uses "default" hangars (indie_space).
-*/
+
 /*
 /datum/overmap/outpost/nanotrasen_asteroid
 	token_icon_state = "station_asteroid_0"
@@ -233,7 +233,7 @@
 		/datum/map_template/outpost/hangar/nt_asteroid_56x40
 	)
 */
-/*
+
 /datum/overmap/outpost/nanotrasen_ice
 	token_icon_state = "station_asteroid"
 	main_template = /datum/map_template/outpost/nanotrasen_ice
@@ -248,14 +248,14 @@
 		/datum/map_template/outpost/hangar/nt_ice_56x40
 	)
 	faction = /datum/faction/nt
-*/
+
 
 /datum/overmap/outpost/byos
 	token_icon_state = "station_1"
 	main_template = /datum/map_template/outpost/byos
 	elevator_template = /datum/map_template/outpost/elevator_indie
 	// Uses "default" hangars (indie_space).
-/*
+
 /datum/overmap/outpost/ngr_rock
 	token_icon_state = "station_asteroid"
 	main_template = /datum/map_template/outpost/ngr_rock
@@ -281,7 +281,7 @@
 		/datum/map_template/outpost/hangar/clip_ocean_56x20,
 		/datum/map_template/outpost/hangar/clip_ocean_56x40
 	)
-*/
+
 
 /datum/overmap/outpost/cybersun_gas_giant
 	token_icon_state = "gas_giant_outpost"
